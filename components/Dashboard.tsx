@@ -1,6 +1,6 @@
-"use client"
 
-import { useState } from "react"
+
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -12,7 +12,6 @@ import {
   BarChart3,
   Settings,
   Bot,
-  Wrench,
   Search,
   Bell,
   Mail,
@@ -23,20 +22,16 @@ import {
   HelpCircle,
   LogOut,
   TrendingUp,
-  Play,
-  Pause,
-  Square,
+  
   ArrowUpRight,
-  CheckCircle2,
-  Clock,
-  AlertCircle,
+  
 } from "lucide-react"
 
 
 
 
 export default function Dashboard() {
-  const [isPlaying, setIsPlaying] = useState(true)
+  
 
   const sidebarItems = [
     { icon: BarChart3, label: "Dashboard", active: true, badge: null },
@@ -87,15 +82,7 @@ export default function Dashboard() {
     },
   ]
 
-  const chartData = [
-    { day: "M", value: 65 },
-    { day: "T", value: 85 },
-    { day: "W", value: 45 },
-    { day: "T", value: 95 },
-    { day: "F", value: 75 },
-    { day: "S", value: 55 },
-    { day: "S", value: 35 },
-  ]
+
 
   const teamMembers = [
     {

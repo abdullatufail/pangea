@@ -1,4 +1,6 @@
 "use client"
+import BottomNav from "@/components/BottomNav";
+import Choose from "@/components/Choose";
 import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
 import Services from "@/components/Services";
@@ -6,12 +8,14 @@ import { useRef } from "react";
 
 export default function Home() {
   const dashRef = useRef(null)
+  const heroRef =useRef(null)
   return (
-    <div className="  min-h-screen w-screen ">
+    <div className="  min-h-screen w-screen tracking-tighter ">
       <Nav /> 
-      <Hero reference={dashRef}/>
+      <BottomNav ref={heroRef} />
+      <Hero dashRef={dashRef} heroRef={heroRef}/>
       <Services reference={dashRef}/>
-     
+      <Choose />
     </div>
   );
 }
