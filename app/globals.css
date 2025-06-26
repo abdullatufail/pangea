@@ -127,6 +127,9 @@ body{
 }
 
 .linear-gradient-1 {
-  background-image: radial-gradient( rgb(121, 121, 170),rgb(30, 30, 131),rgb(30, 30, 131)); /* From red at top to yellow at bottom */
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(17, 17, 112)); /* From red at top to yellow at bottom */
   
+}
+.text-gradient {
+  color:linear-gradient(rgb(255, 255, 255), rgb(17, 17, 112)); /* From red at top to yellow at bottom */
 }
