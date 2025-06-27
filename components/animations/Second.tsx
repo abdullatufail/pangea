@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Second = () => {
   return (
-    <div className="flex gap-4 w-[30rem] absolute -left-7 relative">
+    <div className="flex gap-4 w-[30rem]  -left-7 relative">
       <motion.div 
       initial={{x:0}}
       animate={{x:55}}

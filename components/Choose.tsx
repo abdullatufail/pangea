@@ -2,6 +2,7 @@ import { stringify } from 'querystring';
 import React, { useRef } from 'react'
 import { benefits } from '@/lib/constants';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { ScrambleText } from './animations/ScrambleText';
 const Choose = () => {
     const ref = useRef(null)
     const {scrollYProgress} = useScroll({target:ref})
@@ -23,7 +24,7 @@ const Choose = () => {
                              <h1 className='tracking-tighter font-medium text-2xl '>{benefit.title}</h1>
                              <p className='text-[15px] mt-2 text-gray-700'>{benefit.description}</p>
                          </div>
-                        <h2 className='font-bold text-5xl text-gray-700'>{benefit.percentage}</h2>
+                        <h2 className='font-bold text-5xl text-gray-700'><ScrambleText>{benefit.percentage}</ScrambleText></h2>
                 </div>
                     <div className='hidden md:block h-[100%] w-2/3  bg-black rounded-4xl overflow-hidden'>
                     </div>

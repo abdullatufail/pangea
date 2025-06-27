@@ -2,11 +2,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, useAnimation, useInView, useScroll, useTransform } from 'framer-motion'
 import { services } from '@/lib/constants'
-import { Button } from './ui/button'
 import OpacityReveal from './animations/OpacityReveal'
 import FlipText from './animations/FlipText'
 
-const Services = ({reference}) => {
+const Services = ({reference,homeRef}) => {
     const textRef = useRef(null)
     const ref = useRef(null);
     const isInView = useInView(ref);
@@ -24,6 +23,7 @@ const Services = ({reference}) => {
 
     return (
         <div >
+            <Loader ref={homeRef} />
             <div ref={reference} className='w-screen flex flex-col items-center justify-center bg-white rounded-2xl'>
                 <motion.div 
                     className='absolute z-[-10] top-[570px] bg-white rounded-full w-[700px] h-[700px]'                 
@@ -77,7 +77,7 @@ const Services = ({reference}) => {
                
                 transition={{duration: 0.7, ease: "easeIn"}}
                     >
-                        {services.map((service, index) => (
+                        {services.map((service) => (
                             <motion.div 
                                 ref={textRef}
                                 key={service.title}  
@@ -110,4 +110,16 @@ const Services = ({reference}) => {
     )
 }
 
+
+const Loader= ({ref})=>{
+    const {scrollYProgress } = useScroll({target:ref})
+    const scaleX = useTransform(scrollYProgress,[0,1],[0,1])
+
+    return (
+        <motion.div 
+            className='h-[3px] w-screen bg-black fixed top-0 left-0 z-50 origin-left'
+            style={{scaleX}}
+        />
+    )
+}
 export default Services

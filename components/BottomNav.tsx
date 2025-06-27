@@ -1,21 +1,22 @@
-import { AnimatePresence, motion, useAnimation, useInView } from 'framer-motion'
+import { AnimatePresence, motion,  useInView } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
 import FlipText from './animations/FlipText'
-import { benefits } from '@/lib/constants'
 
 
-const BottomNav = ({ref}) => {
+const BottomNav = ({ref1,ref2}) => {
    const [isVisible, setIsVisible] = useState(true)
-   const inView= useInView(ref)
+   const inView1= useInView(ref1)
+   const inView2= useInView(ref2)
    useEffect(() => {
-        if (!inView) {
+        if (!inView1&&!inView2) {
             setIsVisible(true)
+            
                   
         }else{
             setIsVisible(false)
              
         }
-    }, [inView]);
+    }, [inView1,inView2]);
 
   return (
     
