@@ -16,10 +16,16 @@ export default function Home() {
       <Nav /> 
       <BottomNav ref={heroRef} />
       <Hero dashRef={dashRef} heroRef={heroRef}/>
+      <section id="services">
       <Services reference={dashRef}/>
+      </section>
+      <section id="about">
       <Choose />
+      </section>
       <Benefits />
+      <section id="contact">
       <ROI />
+      </section>
     </div>
   );
 }

@@ -14,9 +14,9 @@ const Nav = () => {
         <div className='w-full px-10 contec text-sm font-bold  mt-2 flex  justify-between items-center text-white rounded-lg '>
             <h1 className='text-xl font-medium '>pangea</h1>
            <div className='text-sm  gap-10 hidden md:flex transition-colors hover:text-gray-600 '>
-                <Link className='hover:text-white transition-colors' href={'/about'}>about</Link>
-                <Link className='hover:text-white transition-colors' href={'/about'}>services</Link>
-                <Link className='hover:text-white transition-colors' href={'/about'}>contact</Link>
+                <Link className='hover:text-white transition-colors' href={'#about'}>about</Link>
+                <Link className='hover:text-white transition-colors' href={'#services'}>services</Link>
+                <Link className='hover:text-white transition-colors' href={'#contact'}>contact</Link>
             </div>
             <FlipText className='bg-white text-blue-900  text-[15px]  w-[7rem] h-[2.4rem]'>Book A Call</FlipText>
         </div>
