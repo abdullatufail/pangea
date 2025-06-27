@@ -26,7 +26,7 @@ const Services = ({reference,homeRef}) => {
             <Loader ref={homeRef} />
             <div ref={reference} className='w-screen flex flex-col items-center justify-center bg-white rounded-2xl'>
                 <motion.div 
-                    className='absolute z-[-10] top-[570px] bg-white rounded-full w-[700px] h-[700px]'                 
+                    className='absolute z-[-10] top-[200px] top-[570px] bg-white rounded-full w-[700px] h-[700px]'                 
                     animate={{ y: [0, -15, 0] }}
                     transition={{
                         duration: 5,
@@ -43,7 +43,7 @@ const Services = ({reference,homeRef}) => {
             {/* total container */}
             <motion.div 
                 ref={serviceRef}
-                className='flex justify-center md:justify-between w-full px-[15vh] h-[150vh] md:h-[400vh] relative top-[23vh]'
+                className='scale-50 md:scale-100 flex justify-center md:justify-between w-full px-[15vh] h-[70vh]  md:h-[400vh] relative top-[23vh]'
                 
             >
                 {/* Left side  */}
@@ -65,7 +65,7 @@ const Services = ({reference,homeRef}) => {
                 </div>
                 
                 {/*  right side */}
-                <div className='hidden md:flex justify-center  sticky top-[15vh] h-[74vh] pt-6 w-[70vw] overflow-x-visible overflow-y-hidden rounded-xl'>
+                <div className='hidden xl:flex justify-center  sticky top-[15vh] h-[74vh] pt-6 w-[70vw] overflow-x-visible overflow-y-hidden rounded-xl'>
                     <motion.div className='space-y-8 '
                     variants={{
                     initial: {opacity: 0},
@@ -81,12 +81,12 @@ const Services = ({reference,homeRef}) => {
                             <motion.div 
                                 ref={textRef}
                                 key={service.title}  
-                                className='h-[70vh] shadow-none hover:shadow-2xl hover:shadow-gray-400 transition-shadow gap-2 w-[80vh]  text-black flex flex-col items-center justify-center tracking-tighter card-gradient  p-4 rounded-3xl '
+                                className='h-[70vh] shadow-none hover:shadow-2xl hover:shadow-gray-400 transition-shadow gap-2 w-[40vh] lg:w-[80vh]  text-black flex flex-col items-center justify-center tracking-tighter card-gradient  p-4 rounded-3xl '
                                 style={{y}}
                                  whileHover={{skewX:-10,skewY:-2,transition:{duration:0.3}}}
                             >
                                 <div className=' w-full h-[40%] rounded-xl bg-inherit p-10 space-y-4 flex flex-col items-center text-center'>
-                                    <h1 className='text-4xl font-bold text-gray-900'>{service.title}</h1>
+                                    <h1 className='text-2xl lg:text-4xl font-bold text-gray-900'>{service.title}</h1>
                                 <p className='text-md text-gray-700 w-[90%]'>{service.description}</p>
                                 </div>
                                 

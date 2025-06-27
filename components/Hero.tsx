@@ -17,13 +17,13 @@ const Hero = ({dashRef,heroRef}) => {
         <motion.div ref={heroRef} 
         initial={{scale:"140%",y:70}}
         animate={{scale:"100%",y:0, transition:{duration:0.5,delay:0.1, ease:"anticipate"}}}
-        className='mb-[150px] z-[110] flex flex-col font-bold items-center text-white tracking-tighter text-3xl md:text-5xl'>
+        className='mb-[150px] z-[110] flex flex-col font-bold items-center text-white tracking-tighter text-xl sm:text-2xl md:text-5xl'>
             <h1>Transform Your Business</h1>
             <h1>Operation Today With <span className='italic'>Pangea</span> </h1>
         </motion.div>
-        <div className=' w-full flex justify-center relative bottom-[80px] gap-5'>
-            <FlipText className={"w-[9rem] h-[3rem] text-blue-900 font-medium bg-white"} >Services</FlipText>
-            <FlipText className={"w-[9rem] h-[3rem] text-white font-medium border-white border-1"} >Consultation</FlipText>
+        <div className=' w-full flex justify-center relative bottom-[80px] gap-0 md:gap-5'>
+            <FlipText className={"w-[9rem] h-[3rem] text-blue-900 font-medium bg-white scale-75 md:scale:100"} >Services</FlipText>
+            <FlipText className={"w-[9rem] h-[3rem] text-white font-medium border-white border-1 scale-75 md:scale:100"} >Consultation</FlipText>
         </div>
         <motion.div 
         className='hidden md:block absolute top-[340px] z-50 rounded-2xl overflow-hidden scale-100 shadow-2xl ' 

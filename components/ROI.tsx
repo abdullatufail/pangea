@@ -7,14 +7,14 @@ const ROI = ({footerRef}) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div >
-      <div className="h-[50vh] w-screen flex items-center justify-center">
+      <div className="h-[10vh] md:h-[50vh] w-screen flex items-center justify-center">
         <motion.div
           className="relative top-1/2 h-[70vh] w-[60vw]"
           onHoverStart={() => setIsHovered(true)}
           onHoverEnd={() => setIsHovered(false)}
         >
           <motion.div
-            className="bg-blue-800 overflow-hidden relative flex flex-col justify-between h-[70vh] w-[60vw]  rounded-3xl p-2"
+            className="bg-blue-800 hidden md:flex overflow-hidden relative  flex-col justify-between h-[70vh] w-[60vw]  rounded-3xl p-2"
             initial={{ scale: "100%" }}
             whileHover={{ scale: "105%" }}
           >
@@ -89,7 +89,7 @@ const ROI = ({footerRef}) => {
             </motion.div>
           </motion.div>
           <motion.div
-            className="absolute top-0 w-full h-full border-2  border-gray-400 rounded-3xl"
+            className="hidden md:block absolute top-0 w-full h-full border-2  border-gray-400 rounded-3xl"
             variants={{
               initial: { scaleX: "102%", scaleY: "104%", borderWidth: "2px" },
               hovered: { scaleX: "104%", scaleY: "106%", borderWidth: "6px" },
@@ -101,13 +101,13 @@ const ROI = ({footerRef}) => {
         </motion.div>
       </div>
 
-      <div ref={footerRef} className="linear-gradient-1 h-[100vh] w-[98.3vw] rounded-3xl m-1 flex flex-col items-center justify-between">
+      <div ref={footerRef} className="linear-gradient-1 h-[40vh] md:h-[100vh] w-[98.3vw] rounded-3xl m-0 md:m-1 flex flex-col items-center justify-between">
             <div></div>
             <div className="w-[60vw] mb-10 space-y-4">
                 <h1 className="text-5xl text-white font-bold tracking-tighter">Let's Collaborate</h1>
                 <div className=" w-full h-[1px] bg-white"></div>
                 <div className="w-full flex justify-between">
-                    <h1 className="text-white text-2xl">M Abdullah Tufail</h1>
+                    <h1 className="text-white text-xl md:text-2xl">M Abdullah Tufail</h1>
                     <div className="flex gap-4">
                     <Link href={"https://github.com/abdullatufail"} className="w-[2.5rem] h-[2.5rem] rounded-md bg-white flex items-center justify-center">
                         <Github className="" />
