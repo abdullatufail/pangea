@@ -39,23 +39,27 @@ export const services = [
       title: "Increased Productivity",
       percentage: "35%",
       description: "Average productivity boost across all client organizations through streamlined processes and automation."
+      ,link:"https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzNvNGx6aTg2YXJkMzNxenQxaG4xd2p6eGtnNjc2bm4zMnV2MGQyaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Fn1XLXZORb7H2/giphy.gif"
     },
     {
       dist: "22",
       title: "Cost Reduction",
       percentage: "40%",
       description: "Significant reduction in IT operational costs through optimized infrastructure and efficient resource management."
+      ,link:"https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWx4eDdyN2ZjeDVyemlmNjV6NWk2bzZ0cGEyNHJodWZxbmt2ZmpydiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/AuG7qwUzshT7lXy7FB/giphy.gif"
     },
     {
       dist: "30",
       title: "Faster Time-to-Market",
       percentage: "50%",
       description: "Accelerated product development and deployment cycles with our agile development methodologies."
+      ,link:"https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3llcXI5aDhzeG4wYjFkbnNpanF1ZWdjNWtibmw1ZmtxNGd1cDU4biZlcD12MV9naWZzX3NlYXJjaCZjdD1n/iRIf7MAdvOIbdxK4rR/giphy.gif"
     },
     {
       dist: "50",
       title: "Enhanced Security",
       percentage: "99.9%",
       description: "Uptime guarantee with enterprise-grade security measures protecting your valuable business data."
+      ,link:""
     }
   ]

@@ -25,7 +25,8 @@ const Choose = () => {
                          </div>
                         <h2 className='font-bold text-5xl text-gray-700'>{benefit.percentage}</h2>
                 </div>
-                    <div className='hidden md:block h-[100%] w-2/3  bg-black rounded-4xl'></div>
+                    <div className='hidden md:block h-[100%] w-2/3  bg-black rounded-4xl overflow-hidden'>
+                    </div>
                 
                 </Card>
              })}
