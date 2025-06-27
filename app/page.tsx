@@ -1,8 +1,10 @@
 "use client"
+import Benefits from "@/components/Benefits";
 import BottomNav from "@/components/BottomNav";
 import Choose from "@/components/Choose";
 import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
+import ROI from "@/components/ROI";
 import Services from "@/components/Services";
 import { useRef } from "react";
 
@@ -16,6 +18,8 @@ export default function Home() {
       <Hero dashRef={dashRef} heroRef={heroRef}/>
       <Services reference={dashRef}/>
       <Choose />
+      <Benefits />
+      <ROI />
     </div>
   );
 }

@@ -31,3 +31,31 @@ export const services = [
       features: ["24/7 Help Desk", "Preventive Maintenance", "System Updates", "Performance Optimization"]
     }
   ]
+
+
+  export const  benefits = [
+    {
+      dist: "15",
+      title: "Increased Productivity",
+      percentage: "35%",
+      description: "Average productivity boost across all client organizations through streamlined processes and automation."
+    },
+    {
+      dist: "22",
+      title: "Cost Reduction",
+      percentage: "40%",
+      description: "Significant reduction in IT operational costs through optimized infrastructure and efficient resource management."
+    },
+    {
+      dist: "30",
+      title: "Faster Time-to-Market",
+      percentage: "50%",
+      description: "Accelerated product development and deployment cycles with our agile development methodologies."
+    },
+    {
+      dist: "50",
+      title: "Enhanced Security",
+      percentage: "99.9%",
+      description: "Uptime guarantee with enterprise-grade security measures protecting your valuable business data."
+    }
+  ]

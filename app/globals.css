@@ -124,12 +124,21 @@
 
 body{
   overflow-x:hidden;
+
 }
 
 .linear-gradient-1 {
   background-image: linear-gradient(rgb(0, 0, 0), rgb(17, 17, 112)); /* From red at top to yellow at bottom */
   
 }
+.linear-gradient-2 {
+  background-image: radial-gradient(rgb(26, 26, 87),rgb(0, 0, 0) ); /* From red at top to yellow at bottom */
+  
+}
 .text-gradient {
   color:linear-gradient(rgb(255, 255, 255), rgb(17, 17, 112)); /* From red at top to yellow at bottom */
+}
+.card-gradient {
+  background-image: linear-gradient(rgb(215, 215, 215),rgb(188, 188, 188)); /* From red at top to yellow at bottom */
+  
 }

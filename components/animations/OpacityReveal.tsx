@@ -31,4 +31,6 @@ const Word =({children, range, progress})=>{
     return <motion.span style={{opacity}}>{children}</motion.span>
 }
 
+
+
 export default OpacityReveal

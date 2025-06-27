@@ -14,10 +14,11 @@ const Services = ({reference}) => {
     const serviceRef = useRef(null);
     const {scrollYProgress} = useScroll({target:serviceRef})
     const y = useTransform(scrollYProgress,[0,1],[0,-2100])
-
+    const [offset,setOffset] = useState(["start 0.3","end"])
     useEffect(() => {
         if (isInView) {
-            mainControls.start("visible");                     
+            mainControls.start("visible");   
+            setOffset(["start","end"])                  
         }
     }, [isInView, mainControls]);
 
@@ -42,15 +43,15 @@ const Services = ({reference}) => {
             {/* total container */}
             <motion.div 
                 ref={serviceRef}
-                className='flex justify-between w-full px-[15vh] h-[400vh] relative top-[23vh]'
+                className='flex justify-center md:justify-between w-full px-[15vh] h-[150vh] md:h-[400vh] relative top-[23vh]'
                 
             >
                 {/* Left side  */}
-                <div ref={ref} className='sticky top-[15vh] h-fit flex flex-col gap-10 tracking-tighter'>
+                <div ref={ref} className='pt-6 sticky top-[15vh] h-fit flex flex-col gap-10 tracking-tighter '>
                   <OpacityReveal 
-                  className={'w-[35rem] font-bold text-4xl text-gray-800'} 
+                  className={'w-[24rem] md:w-[35rem] font-bold text-2xl md:text-4xl text-gray-800'} 
                   ref={serviceRef}
-                  offset={["start","end"]}> 
+                  offset={offset}> 
                         Comprehensive IT Solutions Tailored For Modern Enterprises From cloud infrastructure to AI implementation, we have the expertise to drive your digital transformation.
                 </OpacityReveal> 
                     
@@ -64,24 +65,27 @@ const Services = ({reference}) => {
                 </div>
                 
                 {/*  right side */}
-                <div className='sticky top-[15vh] h-[70vh] w-[40vw] overflow-hidden rounded-xl'>
+                <div className='hidden md:flex justify-center  sticky top-[15vh] h-[74vh] pt-6 w-[70vw] overflow-x-visible overflow-y-hidden rounded-xl'>
                     <motion.div className='space-y-8 '
                     variants={{
                     initial: {opacity: 0},
-                    visible: {opacity: 1}
+                    visible: {opacity: 1},
+                    hovered:{skewY:10}
                 }}
                 initial="initial"
                 animate={mainControls}
+               
                 transition={{duration: 0.7, ease: "easeIn"}}
                     >
                         {services.map((service, index) => (
                             <motion.div 
                                 ref={textRef}
                                 key={service.title}  
-                                className='h-[70vh] gap-2 w-full  text-black flex flex-col items-center justify-center tracking-tighter '
+                                className='h-[70vh] shadow-none hover:shadow-2xl hover:shadow-gray-400 transition-shadow gap-2 w-[80vh]  text-black flex flex-col items-center justify-center tracking-tighter card-gradient  p-4 rounded-3xl '
                                 style={{y}}
+                                 whileHover={{skewX:-10,skewY:-2,transition:{duration:0.3}}}
                             >
-                                <div className=' w-full h-[40%] rounded-xl bg-gray-300 p-10 space-y-4 flex flex-col items-center text-center'>
+                                <div className=' w-full h-[40%] rounded-xl bg-inherit p-10 space-y-4 flex flex-col items-center text-center'>
                                     <h1 className='text-4xl font-bold text-gray-900'>{service.title}</h1>
                                 <p className='text-md text-gray-700 w-[90%]'>{service.description}</p>
                                 </div>
